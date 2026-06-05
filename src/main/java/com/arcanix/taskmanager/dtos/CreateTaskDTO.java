@@ -7,7 +7,6 @@ import java.time.LocalDateTime;
 
 public record CreateTaskDTO(String title,
                             String description,
-                            LocalDateTime createdAt,
                             LocalDateTime deadline,
                             Priority priority,
                             Status status) {
