@@ -31,11 +31,7 @@ public class Task {
 
     public Task (UUID id, String title, String description, LocalDateTime createdAt,
                  LocalDateTime deadline, Priority priority, Status status){
-        if (id == null)
-            this.id = UUID.randomUUID();
-        else
-            this.id = id;
-
+        this.id = id;
         this.title = title;
         this.description = description;
 
