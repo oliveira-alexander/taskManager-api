@@ -4,6 +4,7 @@ import com.arcanix.taskmanager.dtos.CreateTaskDTO;
 import com.arcanix.taskmanager.dtos.ResponseTaskDTO;
 import com.arcanix.taskmanager.dtos.UpdateTaskDTO;
 import com.arcanix.taskmanager.entities.Task;
+import com.arcanix.taskmanager.enums.Status;
 
 import java.time.LocalDateTime;
 
@@ -15,7 +16,7 @@ public class TaskMapper {
                         LocalDateTime.now(),
                         dto.deadline(),
                         dto.priority(),
-                        dto.status());
+                        Status.CREATED);
     }
 
     public static Task updateDtoToTask(UpdateTaskDTO dto){
